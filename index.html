@@ -17,25 +17,32 @@
   </head>
   <body>
     <aside class="sidebar" id="sidebar">
-      <div class="toggle" id="toggle" aria-label="Toggle sidebar">☰</div>
+      <button class="toggle" id="toggle" type="button" aria-label="Toggle sidebar" aria-controls="primary-navigation" aria-expanded="true">☰</button>
 
       <div class="logo">
         <h2><span>G</span>ideon</h2>
         <p>Software developer</p>
       </div>
 
-      <ul>
-        <li class="active" onclick="showPage('home', this)"><span>Home</span></li>
-        <li onclick="showPage('about', this)"><span>About</span></li>
-        <li onclick="showPage('services', this)"><span>Services</span></li>
-        <li onclick="showPage('portfolio', this)"><span>Portfolio</span></li>
-        <li onclick="showPage('skills', this)"><span>Skills</span></li>
-        <li onclick="showPage('blog', this)"><span>Blog</span></li>
-        <li onclick="showPage('contact', this)"><span>Contact</span></li>
-      </ul>
+      <nav id="primary-navigation" aria-label="Main navigation">
+        <ul>
+          <li class="active"><button class="nav-link" type="button" data-page="home" aria-current="page"><span>Home</span></button></li>
+          <li><button class="nav-link" type="button" data-page="about"><span>About</span></button></li>
+          <li><button class="nav-link" type="button" data-page="services"><span>Services</span></button></li>
+          <li><button class="nav-link" type="button" data-page="portfolio"><span>Portfolio</span></button></li>
+          <li><button class="nav-link" type="button" data-page="skills"><span>Skills</span></button></li>
+          <li><button class="nav-link" type="button" data-page="blog"><span>Blog</span></button></li>
+          <li><button class="nav-link" type="button" data-page="contact"><span>Contact</span></button></li>
+        </ul>
+      </nav>
     </aside>
+    <button class="menu-backdrop" id="menu-backdrop" type="button" aria-label="Close navigation" tabindex="-1" hidden></button>
 
     <main class="content" id="content">
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </button>
       <div class="profile-wrap">
         <img
           src="images/Gemini_Generated_Image_xhhtrexhhtrexhht.png"
